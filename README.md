@@ -111,10 +111,24 @@ Por ello se necesita lo siguiente:
 - Según la proyección para el próximo trimestre el crecimiento es positivo, sin embargo, enero 2023 se proyecta más bajo que enero del año 2022.
   
 #### Calcular medidas de resumen estadístico 
-summary_stats <- infobox_clean %>% 
- summarise( 
- Mean = mean(NumericValue), 
- Median = median(NumericValue), 
- SD = sd(NumericValue), 
- Min = min(NumericValue), 
- Max = max(NumericValue) 
+Para realizar el análisis por medio de R
+Se tiene que instalar RStudio luego de instalar
+Se debe de importar la data de Excel por medio de la ventana FILE, seleccionar import data set, luego seleccionar From Exel.
+En la nueva ventana se llama al archivo en el botón Browse, se selecciona el lugar de la ubicación del archivo se renombra (Name) como mydata_import, en Sheet se cambia default por el nombre de la pestaña (en el archivo seleccionar data) se presiona el botón importar.
+
+#### Código para realizar un resumen estadístico estadístico
+- summary(mydata_import) 
+- Brindará la siguiente información para analizar 
+- Min.   :    
+- 1st Qu.:  
+- Median :    
+- Mean   :    
+- 3rd Qu.:    
+- Max.   : 
+- NA's   :   
+- Esto para poder realizar el análisis de cada columna, en este caso se utilizará el siguiente código con las columnas montofacturado
+- 
+#### summary(mydata_import$MontoFacturado)
+
+   Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA's 
+    0      108      554        1442 1120      38332672        2 
